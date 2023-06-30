@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { createContext } from 'react';
+// import Useeffect from './Useeffect';
+// import ComA from './ComA';
+// import Accordion from './Accordion';
 import './App.css';
+import Todo from './Todo';
+
+const FirstName = createContext();
+const LastName = createContext();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Todo/>
+     {/* <Accordion /> */}
+     {/* <FirstName.Provider value={'HELLO'}>
+      <LastName.Provider value={'INDORE'}>
+       <ComA/> 
+        </LastName.Provider>
+       </FirstName.Provider> */}
+       {/* <Useeffect/> */}
+     
+    </>
   );
 }
 
 export default App;
+export {FirstName, LastName};
+
